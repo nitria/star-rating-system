@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+.container {
+  width: 450px;
+  padding: 1.5rem;
+  border: 2px solid #00ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+input {
+  display: none;
+}
+
+label {
+  padding: 0 15px;
+}
+
+input:checked ~ label:nth-child(2) svg,
+label:nth-child(2):hover svg {
+  filter: drop-shadow(0px 0px 2px #00ffff)
+    drop-shadow(0px 0px 5px rgba(0, 255, 255, 0.5));
+}
+
+input:not(:checked) ~ label:hover svg path,
+input:not(:checked) ~ label:hover ~ label svg path {
+  fill: #00ffff;
+}
+
+input:checked ~ label svg path {
+  fill: #00ffff;
+}
+
+p {
+  height: 50px;
+  margin-top: 2rem;
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  font-family: fantasy;
+}
